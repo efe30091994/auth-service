@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: auth
+
+  jpa:
+    open-in-view: false
+
+  liquibase:
+    change-log: classpath:db/db.changelog-master.xml
+    password: auth_password
+    enabled: 'true'
+    user: auth_user
+
+  datasource:
+    username: auth_user
+    password: auth_password
+    url: jdbc:postgresql://localhost:5452/auth_db
+
+security:
+    jwt:
+      secret-key: 7dcc8406cf68a0297a563ba7b3b3483d655fc073d99928dbc16b5fdb8d269fcb
+      expiration-time: 3600000

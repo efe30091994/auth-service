@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.7.xsd">
+
+    <changeSet id="2024-08-06-create_users_table" author="yerassyl.seiitkhanov">
+        <createTable tableName="users">
+            <column name="id" type="serial">
+                <constraints primaryKey="true" primaryKeyName="users_id_pk"/>
+            </column>
+
+            <column name="full_name" type="varchar(255)"/>
+
+            <column name="username" type="varchar(15)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+
+            <column name="password" type="varchar(255)"/>
+            <column name="email" type="varchar(255)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+
+            <column name="created_at" type="timestamp" defaultValueComputed="current_timestamp"/>
+            <column name="updated_at" type="timestamp" defaultValueComputed="current_timestamp"/>
+        </createTable>
+
+        <createIndex indexName="index_users_id_idx" tableName="users">
+            <column name="id"/>
+        </createIndex>
+    </changeSet>
+
+</databaseChangeLog>
