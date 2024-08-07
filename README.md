@@ -9,6 +9,9 @@
 2. Open docker-compose.yml file in the project and click the green triangle button or run in terminal this command : docker-compose up -d
 3. If docker container is running then everything is OK
 
+# How to create test user
+1. Send the GET request to address localhost:8080/test in order to create test user with email efe30091994@mail.ru and password Quantori2024!
+
 # How to check our service for auth
 1. Run the service in intellij idea ultimate, clicking the green triangle button RUN
 2. After that you can send requests via Postman
