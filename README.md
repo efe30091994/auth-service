@@ -10,7 +10,7 @@
 3. If docker container is running then everything is OK
 
 # How to create test user
-1. Send the GET request to address localhost:8080/test in order to create test user with email efe30091994@mail.ru and password Quantori2024!
+1. Send the GET request to address localhost:8080/test in order to create test user with email efe30091994@mail.ru and password Quantori2024! (I know that it is weird to create test user in such way. But I did not want to write inserts, as it is a test task. On the other hand it would be easy for you to create test user in one click when you check how the service work)
 
 # How to check our service for auth
 1. Run the service in intellij idea ultimate, clicking the green triangle button RUN
